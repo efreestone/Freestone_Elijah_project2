@@ -52,6 +52,7 @@ a {
     color: #ffffff;
     font-size: 200%;
     padding: 20px 5%;
+    margin: auto;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     border: solid 1px #172934;
