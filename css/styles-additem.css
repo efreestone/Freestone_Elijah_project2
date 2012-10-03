@@ -5,21 +5,64 @@ Project 2
 10-1-12
 */
 
+html {
+    background-color: #7ED0E0;
+}
+
 body {
-    font-family: "Times New Roman", "Arial", sans-serif;
+    font-family: "Times New Roman", "Arial";
     margin: 0.5em auto;
     padding: 0.5em;
-    color: #000000;
+    color: #172934;
     max-width: 35em;
     border: 0.5em white;
     line-height: 1.5em;
+    position: inherit;
 }
 
 h1 {
-    background-color: blue;
-    color: #ffffff;
+    color: #172934;
     font-size: 225%;
     text-align: center;
     padding: 0.75em;
     margin: -0.75em -0.75em 0.75em -0.75em;
+}
+
+fieldset {
+    background-color: #ccf5fd;
+    font-size: 125%;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+}
+
+legend {
+    background-color: #ccf5fd;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    padding: 2px 7px;
+    font-family: "Helvetica", "Arial";
+}
+
+select {
+    background-color: #000000;
+    padding: 2px 10px;
+    width: auto;
+    background: #7ED0E0;
+}
+
+input.submit {
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: block;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#05c331), to(#026f1b));
+    background-color: #026f1b;
+    color: #ffffff;
+    font-size: 200%;
+    padding: 20px 5%;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    text-shadow: 0 -1px 0 #172934;
 }

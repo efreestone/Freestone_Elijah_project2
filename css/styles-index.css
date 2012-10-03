@@ -6,30 +6,32 @@ Project 2
 */
 
 html {
-    background-color: blue;
+    background-color: #7ED0E0;
 }
+
 body {
-    font-family: "Times New Roman", "Arial", sans-serif;
     margin: 0.5em auto;
     padding: 0.5em;
-    color: #000000;
-    max-width: 35em;
+    color: #172934;
+    max-width: device-width;
+    max-height: device-height;
     border: 0.5em white;
     line-height: 1.5em;
+    position: inherit;
 }
 
 h1 {
-    background-color: blue;
-    color: #ffffff;
-    font-size: 200%;
+    font-family: "Times New Roman", "Arial";
+    color: #172934;
+    font-size: 275%;
     text-align: center;
     padding: 0.75em;
     margin: -0.75em -0.75em 0.75em -0.75em;
 }
 
 h2 {
-    background-color: blue;
-    color: #ffffff;
+    font-family: "Helvetica", "Arial";
+    color: #172934;
     font-size: 150%;
     text-align: center;
     padding: 1em;
@@ -42,13 +44,16 @@ h1 + h2 {
 }
 
 a {
-    background-color: green;
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: block;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#05c331), to(#026f1b));
+    background-color: #026f1b;
     color: #ffffff;
     font-size: 200%;
-    padding: 10px 50px;
+    padding: 20px 5%;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: solid 2px white;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-    -webkit-transition-duration: 0.5s;
+    border: solid 1px #172934;
+    text-shadow: 0 -1px 0 #172934;
 }
