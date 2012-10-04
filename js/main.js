@@ -41,6 +41,26 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     };
     
+    function toggleControls(n) {
+        switch(n) {
+            case "on":
+                $("eventForm").style.display = "none";
+                $("clearData").style.display = "inline";
+                $("displayData").style.display = "none";
+                $("addNew").style.display = "inline";
+                break;
+            case "off":
+                $("eventForm").style.display = "block";
+                $("clearData").style.display = "inline";
+                $("displayData").style.display = "inline";
+                $("addNew").style.display = "none";
+                $("items").style.display = "none";
+                break;
+            default:
+                return false;
+        }    
+    };
+    
    function saveData() {
         var id = Math.floor(Math.random()*100000001);
         //Gather up all our form field values and store in an object.
@@ -54,18 +74,23 @@ window.addEventListener("DOMContentLoaded", function() {
             item.attend = ["Is attendance required?:", attendValue]; //Attendance Radio Buttons
             item.details = ["Event Details:", $("details").value]; //Event Details
             
-          //Save Data into Local Storage: Use Stringify to convert object to a string.
+        //Save Data into Local Storage: Use Stringify to convert object to a string.
         localStorage.setItem(id, JSON.stringify(item));
         alert("Date Saved!");
     };
     
     function showData() {
+        toggleControls("on");
+        if(localStorage.length === 0) {
+            alert("There are no dates to show.")
+        }
         //Write Data from Local Storage to the browser.
         var makeDiv = document.createElement("div");
         makeDiv.setAttribute("id", "items");
         var makeList = document.createElement("ul");
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
+        $("items").style.display = "block";
         for(var i=0, len=localStorage.length; i<len; i++) {
             var makeLi = document.createElement("li");
             makeList.appendChild(makeLi);
@@ -83,6 +108,17 @@ window.addEventListener("DOMContentLoaded", function() {
             }
         }
     };
+    
+    function clearData() {
+        if(localStorage.length === 0) {
+            alert("No data to clear.");
+        }else{
+            localStorage.clear();
+            alert("All dates removed!")
+            window.location.reload();
+            return false;
+        }
+    };
 
     //Variable defaults
     var eventTypes = ["--Choose An Event Type--", "Birthday", "Anniversary", "Other"],
@@ -93,8 +129,8 @@ window.addEventListener("DOMContentLoaded", function() {
     //Set link & Submit Click Events
     var show = $("displayData");
     show.addEventListener("click", showData);
-    /*var clearData = $("clearData");
-    clearData.addEventListener("click", clearLocal);*/
+    var clear = $("clearData");
+    clear.addEventListener("click", clearData);
     var save = $("submit");
     save.addEventListener("click", saveData);
     
