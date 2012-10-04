@@ -45,7 +45,7 @@ legend {
     font-family: "Helvetica", "Arial";
 }
 
-input.submit {
+input#submit {
     font-family: "Helvetica", "Arial", sans-serif;
     display: block;
     text-align: center;

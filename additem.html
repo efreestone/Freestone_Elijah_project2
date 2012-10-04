@@ -22,19 +22,12 @@
 	</head>
 	<body>
 		<h1>Save-a-date</h1>
-		<form action="#" method="post">
+		<form action="#" method="post" id="event">
 			<fieldset>
 			<legend>Event Info</legend>
-		<!-- Type of Event -->
 			<ul>
-				<li>
-					<label for="evtype">Type of Event:</label>
-					<select id="evtype">
-						<option value="Birthday">Birthday</option>
-						<option value="Anniversary">Anniversary</option>
-						<option value="Other">Other</option>
-					</select>
-				</li>
+		<!-- Type of Event -->
+				<li id="select"><label for="evtype">Type of Event:</label></li>
 		<!-- Date of Event -->
 				<li><label for="evdate">Event Date:</label><input type="date" id="evdate" /></li>
 		<!-- Event Description -->
@@ -43,10 +36,10 @@
 				<li><label for="importance">Event Importance:</label><input type="range" id="importance" min="1" max="10" class="range" /></li>
 		<!-- Attendance required?  -->
 				<li>Is Attendance Required?
-					<ul>
+					<ul class="checkbox">
 						<li><input type="radio" value="Yes" id="Yes" name="attend" /><label for="Yes">Yes</label></li>
 						<li><input type="radio" value="No" id="No" name="attend" /><label for="No">No</label></li>
-						<li><input type="radio" checked value="Undecided" id="Undecided" name="attend" /><label for="Undecided">Undecided</label></li>
+						<li><input type="radio" value="Undecided" id="Undecided" name="attend" /><label for="Undecided">Undecided</label></li>
 					</ul>
 				</li>
 			</ul>
@@ -59,13 +52,14 @@
 				<input type="hidden" value="true" />
 			</fieldset>
 		<!-- Submit Button -->	
-			<input type="submit" value="Save Date!" class="submit" />
+			<input type="submit" value="Save Date!" id="submit" />
 			<br>
 		<!-- Clear Stored Data Link -->
-			<a href="#">Clear Local Data</a> 
+			<a href="#" id="clearData">Clear Local Data</a> 
 		<!-- Display Data Link -->
-			<a href="#">Display Data</a> 
+			<a href="#" id="displayData">Display Data</a> 
 		</form>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 
 </html>
