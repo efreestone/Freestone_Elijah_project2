@@ -47,19 +47,19 @@ window.addEventListener("DOMContentLoaded", function() {
         //Object properties contain array with the form label and input value.
     getSelectedRadio();
         var item         = {};
-            item.evtype   = ["Event", $("events").value]; //Event type selector
-            item.evdate  = ["Date", $("evdate").value]; //Event Date
-            item.evinfo  = ["Info", $("evinfo").value]; //Event Info
-            item.importance = ["Importance", $("importance").value]; //Event Importance Slider
-            item.attend = ["Is attendance required?", attendValue]; //Attendance Radio Buttons
-            item.details = ["Event Details", $("details").value]; //Event Details
+            item.events   = ["Event:", $("events").value]; //Event type selector
+            item.evdate  = ["Date:", $("evdate").value]; //Event Date
+            item.evinfo  = ["Info:", $("evinfo").value]; //Event Info
+            item.importance = ["Importance:", $("importance").value]; //Event Importance Slider
+            item.attend = ["Is attendance required?:", attendValue]; //Attendance Radio Buttons
+            item.details = ["Event Details:", $("details").value]; //Event Details
             
           //Save Data into Local Storage: Use Stringify to convert object to a string.
         localStorage.setItem(id, JSON.stringify(item));
         alert("Date Saved!");
     };
     
-    /*function showData() {
+    function showData() {
         //Write Data from Local Storage to the browser.
         var makeDiv = document.createElement("div");
         makeDiv.setAttribute("id", "items");
@@ -82,7 +82,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 makeSubLi.innerHTML = optSubText;
             }
         }
-    };*/
+    };
 
     //Variable defaults
     var eventTypes = ["--Choose An Event Type--", "Birthday", "Anniversary", "Other"],
@@ -91,9 +91,9 @@ window.addEventListener("DOMContentLoaded", function() {
     makeEvType();
 
     //Set link & Submit Click Events
-    /*var show = $("displayData");
-    showData.addEventListener("click", showData);
-    var clearData = $("clearData");
+    var show = $("displayData");
+    show.addEventListener("click", showData);
+    /*var clearData = $("clearData");
     clearData.addEventListener("click", clearLocal);*/
     var save = $("submit");
     save.addEventListener("click", saveData);
