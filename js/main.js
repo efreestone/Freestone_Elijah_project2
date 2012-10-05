@@ -127,11 +127,10 @@ window.addEventListener("DOMContentLoaded", function() {
     makeEvType();
 
     //Set link & Submit Click Events
+    var save = $("submit");
+    save.addEventListener("click", saveData);
     var show = $("displayData");
     show.addEventListener("click", showData);
     var clear = $("clearData");
-    clear.addEventListener("click", clearData);
-    var save = $("submit");
-    save.addEventListener("click", saveData);
-    
+    clear.addEventListener("click", clearData); 
 });

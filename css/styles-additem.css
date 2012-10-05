@@ -9,6 +9,14 @@ html {
     background-color: #7ED0E0;
 }
 
+h1 {
+    color: #172934;
+    font-size: 250%;
+    text-align: center;
+    padding: 0.75em;
+    margin: -0.75em -0.75em 0.025em -0.75em;
+}
+
 body {
     font-family: "Times New Roman", "Arial";
     margin: 0.5em auto;
@@ -20,12 +28,13 @@ body {
     position: inherit;
 }
 
-h1 {
-    color: #172934;
-    font-size: 250%;
-    text-align: center;
-    padding: 0.75em;
-    margin: -0.75em -0.75em 0.025em -0.75em;
+legend {
+    background-color: #f2fdff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    padding: 2px 7px;
+    font-family: "Helvetica", "Arial";
 }
 
 fieldset {
@@ -34,30 +43,28 @@ fieldset {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     border: solid 1px #172934;
+    margin-bottom: 5px;
 }
 
-legend {
-    background-color: #ccf5fd;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border: solid 1px #172934;
-    padding: 2px 7px;
-    font-family: "Helvetica", "Arial";
+input#importance {
+    -webkit-appearance: none;
+    background-color: #172934;
+    height: 8px;
+    width: 175px;
+    margin-top: 18px;
+    margin-bottom: 15px;
 }
-
-input#submit {
-    font-family: "Helvetica", "Arial", sans-serif;
-    display: block;
-    text-align: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#05c331), to(#026f1b));
-    background-color: #026f1b;
-    color: #ffffff;
-    font-size: 200%;
-    padding: 10px 10%;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border: solid 1px #172934;
-    text-shadow: 0 -1px 0 #172934;
+ 
+input#importance::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    position: relative;
+    width: 20px;
+    height: 30px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    border: solid 1px #b1edf9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#68d4ea), to(#23a0b9));
 }
 
 textarea {
@@ -69,7 +76,29 @@ textarea {
     font-size: 100%;
 }
 
+input#submit {
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: inline-table;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#05c331), to(#026f1b));
+    background-color: #026f1b;
+    color: #ffffff;
+    font-size: 200%;
+    padding: 10px 10%;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    text-shadow: 0 -1px 0 #172934;
+    margin-bottom: 10px;
+}
+
 a {
+    background-color: #f2fdff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #172934;
+    padding: 2px 7px;
     font-family: "Helvetica", "Arial";
     font-size: 120%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f2fdff), to(#97edfc));
 }
